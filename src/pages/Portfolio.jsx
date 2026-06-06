@@ -6,6 +6,34 @@ import CategoryFilter from "../components/catalog/CategoryFilter";
 import FinalCTA from "../components/common/FinalCTA";
 import { portfolioProjects } from "../data/portfolioProjects";
 import { usePageMeta } from "../utils/usePageMeta";
+import { primarySeoKeywords, siteUrl } from "../constants/seo";
+
+const portfolioSeo = {
+  title: "Portfolio LJP Custom Furniture Magelang | Project Rumah, Kantor & Cafe",
+  description:
+    "Portfolio LJP Custom Furniture Magelang untuk project kitchen set modern minimalis, lemari custom, furniture rumah, meja kantor, cabinet, furniture cafe, restoran, dan ruang komersial.",
+  path: "/portfolio",
+  keywords: [
+    ...primarySeoKeywords,
+    "portfolio custom furniture Magelang",
+    "furniture rumah Magelang",
+    "furniture kantor Magelang",
+    "furniture cafe Magelang",
+    "custom furniture modern Magelang",
+    "furniture modern minimalis Magelang"
+  ],
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    url: `${siteUrl}/portfolio`,
+    name: "Portfolio LJP Custom Furniture Magelang",
+    description:
+      "Portfolio project custom furniture LJP di Magelang untuk hunian, kantor, cafe, restoran, dan commercial space.",
+    inLanguage: "id-ID",
+    isPartOf: { "@id": `${siteUrl}/#website` },
+    about: { "@id": `${siteUrl}/#business` }
+  }
+};
 
 export default function Portfolio() {
   const [activeType, setActiveType] = useState("All Projects");
@@ -19,8 +47,9 @@ export default function Portfolio() {
       : portfolioProjects.filter((project) => project.type === activeType);
 
   usePageMeta(
-    "Portfolio Project Custom Furniture | LJP Custom Furniture Magelang",
-    "Portfolio project LJP Custom Furniture untuk kitchen set, wardrobe, furniture kantor, cafe, cabinet, dan commercial custom project di Magelang."
+    portfolioSeo.title,
+    portfolioSeo.description,
+    portfolioSeo
   );
 
   return (

@@ -8,6 +8,35 @@ import { siteConfig } from "../constants/siteConfig";
 import { whatsappMessages } from "../constants/whatsapp";
 import { formatWhatsappUrl } from "../utils/formatWhatsappUrl";
 import { usePageMeta } from "../utils/usePageMeta";
+import { primarySeoKeywords, siteUrl } from "../constants/seo";
+
+const aboutSeo = {
+  title: "Tentang LJP Custom Furniture Magelang | Mebel Custom & Interior Modern",
+  description:
+    "Profil LJP Custom Furniture Magelang, jasa mebel custom dan furniture interior untuk rumah, kantor, cafe, restoran, hotel, villa, homestay, serta ruang bisnis di Magelang dan Jawa Tengah.",
+  path: "/about",
+  keywords: [
+    ...primarySeoKeywords,
+    "mebel custom Magelang",
+    "furniture interior Magelang",
+    "jasa interior Magelang",
+    "interior rumah Magelang",
+    "interior kantor Magelang",
+    "interior cafe Magelang",
+    "furniture handmade Magelang"
+  ],
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    url: `${siteUrl}/about`,
+    name: "Tentang LJP Custom Furniture Magelang",
+    description:
+      "Profil studio custom furniture lokal Magelang untuk kebutuhan furniture custom, mebel custom, dan interior modern.",
+    inLanguage: "id-ID",
+    isPartOf: { "@id": `${siteUrl}/#website` },
+    about: { "@id": `${siteUrl}/#business` }
+  }
+};
 
 const values = [
   { icon: Ruler, title: "Presisi Ruang", text: "Furniture diarahkan mengikuti ukuran dan layout ruangan." },
@@ -18,8 +47,9 @@ const values = [
 
 export default function About() {
   usePageMeta(
-    "Tentang LJP Custom Furniture Magelang",
-    "Profil LJP Custom Furniture sebagai studio custom furniture lokal Kabupaten Magelang untuk kebutuhan hunian, kantor, cafe, restoran, dan ruang komersial."
+    aboutSeo.title,
+    aboutSeo.description,
+    aboutSeo
   );
 
   return (

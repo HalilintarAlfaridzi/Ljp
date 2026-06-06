@@ -2,7 +2,9 @@ import Button from "../components/common/Button";
 import { usePageMeta } from "../utils/usePageMeta";
 
 export default function NotFound() {
-  usePageMeta("Halaman Tidak Ditemukan | LJP Custom Furniture", "Halaman yang Anda cari tidak tersedia.");
+  usePageMeta("Halaman Tidak Ditemukan | LJP Custom Furniture", "Halaman yang Anda cari tidak tersedia.", {
+    robots: "noindex, follow"
+  });
 
   return (
     <section className="page-hero not-found">

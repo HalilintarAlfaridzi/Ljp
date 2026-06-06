@@ -6,11 +6,40 @@ import { siteConfig } from "../constants/siteConfig";
 import { whatsappMessages } from "../constants/whatsapp";
 import { formatWhatsappUrl } from "../utils/formatWhatsappUrl";
 import { usePageMeta } from "../utils/usePageMeta";
+import { primarySeoKeywords, siteUrl } from "../constants/seo";
+
+const contactSeo = {
+  title: "Kontak LJP Furniture Magelang | Jasa Custom Furniture & Kitchen Set",
+  description:
+    "Hubungi LJP Furniture Magelang untuk konsultasi jasa custom furniture, kitchen set custom, lemari custom, meja custom, furniture kantor, furniture cafe, restoran, hotel, villa, homestay, dan interior custom.",
+  path: "/contact",
+  keywords: [
+    ...primarySeoKeywords,
+    "kontak LJP Furniture Magelang",
+    "tempat bikin furniture custom Magelang",
+    "tempat bikin kitchen set Magelang",
+    "tempat bikin lemari custom Magelang",
+    "tempat bikin meja custom Magelang",
+    "jasa furniture Jawa Tengah"
+  ],
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    url: `${siteUrl}/contact`,
+    name: "Kontak LJP Furniture Magelang",
+    description:
+      "Halaman kontak LJP Custom Furniture Magelang untuk konsultasi furniture custom, kitchen set, lemari, meja, dan interior custom.",
+    inLanguage: "id-ID",
+    isPartOf: { "@id": `${siteUrl}/#website` },
+    about: { "@id": `${siteUrl}/#business` }
+  }
+};
 
 export default function Contact() {
   usePageMeta(
-    "Kontak LJP Custom Furniture Magelang",
-    "Hubungi LJP Custom Furniture di Kabupaten Magelang dekat kantor KPU untuk konsultasi kitchen set, wardrobe, cabinet, furniture kantor, cafe, restoran, dan project custom."
+    contactSeo.title,
+    contactSeo.description,
+    contactSeo
   );
 
   return (

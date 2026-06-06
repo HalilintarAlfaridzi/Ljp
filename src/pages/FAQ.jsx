@@ -6,11 +6,45 @@ import { faqs } from "../data/faqs";
 import { whatsappMessages } from "../constants/whatsapp";
 import { formatWhatsappUrl } from "../utils/formatWhatsappUrl";
 import { usePageMeta } from "../utils/usePageMeta";
+import { primarySeoKeywords, siteUrl } from "../constants/seo";
+
+const faqSeo = {
+  title: "FAQ Jasa Custom Furniture Magelang | LJP Furniture",
+  description:
+    "FAQ LJP Furniture Magelang tentang jasa pembuatan furniture custom, kitchen set, lemari custom, meja custom, furniture rumah, kantor, cafe, estimasi, material, survey, dan konsultasi desain.",
+  path: "/faq",
+  keywords: [
+    ...primarySeoKeywords,
+    "jasa pembuatan furniture Magelang",
+    "jasa pembuatan kitchen set Magelang",
+    "jasa pembuatan lemari custom Magelang",
+    "furniture sesuai ukuran",
+    "furniture sesuai kebutuhan",
+    "furniture custom berkualitas",
+    "furniture custom premium"
+  ],
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    url: `${siteUrl}/faq`,
+    name: "FAQ Jasa Custom Furniture Magelang",
+    inLanguage: "id-ID",
+    mainEntity: faqs.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer
+      }
+    }))
+  }
+};
 
 export default function FAQ() {
   usePageMeta(
-    "FAQ Custom Furniture Magelang | LJP Custom Furniture",
-    "Pertanyaan umum tentang custom order, estimasi harga, konsultasi desain, area layanan, referensi desain, dan survey lokasi LJP Custom Furniture."
+    faqSeo.title,
+    faqSeo.description,
+    faqSeo
   );
 
   return (

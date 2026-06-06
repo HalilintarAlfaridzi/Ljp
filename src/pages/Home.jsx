@@ -27,6 +27,7 @@ import { processSteps } from "../data/processSteps";
 import { faqs } from "../data/faqs";
 import { formatWhatsappUrl } from "../utils/formatWhatsappUrl";
 import { usePageMeta } from "../utils/usePageMeta";
+import { defaultSeo, primarySeoKeywords, serviceCatalog, siteUrl } from "../constants/seo";
 
 const trustItems = [
   { icon: Ruler, title: "Custom sesuai ukuran ruangan" },
@@ -37,10 +38,79 @@ const trustItems = [
 
 const heroBadges = ["Custom by request", "Residential & commercial", "Magelang based"];
 
+const homeSeo = {
+  title: defaultSeo.title,
+  description: defaultSeo.description,
+  path: "/",
+  keywords: defaultSeo.keywords,
+  structuredData: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": `${siteUrl}/#business`,
+        name: "LJP Custom Furniture",
+        alternateName: ["LJP", "LJP Furniture", "LJP Furniture Magelang"],
+        description: defaultSeo.description,
+        url: siteUrl,
+        image: defaultSeo.image,
+        telephone: "+62 812-3456-7890",
+        priceRange: "$$",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Dekat kantor KPU",
+          addressLocality: "Kabupaten Magelang",
+          addressRegion: "Jawa Tengah",
+          addressCountry: "ID"
+        },
+        areaServed: [
+          "Kabupaten Magelang",
+          "Kota Magelang",
+          "Mertoyudan",
+          "Muntilan",
+          "Secang",
+          "Borobudur",
+          "Jawa Tengah"
+        ],
+        knowsAbout: defaultSeo.keywords,
+        makesOffer: serviceCatalog.map((service) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: service,
+            areaServed: "Magelang, Jawa Tengah"
+          }
+        }))
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        name: "LJP Custom Furniture",
+        alternateName: ["LJP", "LJP Furniture Magelang"],
+        url: siteUrl,
+        inLanguage: "id-ID",
+        keywords: defaultSeo.keywords.join(", ")
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${siteUrl}/#webpage`,
+        url: siteUrl,
+        name: defaultSeo.title,
+        description: defaultSeo.description,
+        isPartOf: { "@id": `${siteUrl}/#website` },
+        about: { "@id": `${siteUrl}/#business` },
+        inLanguage: "id-ID",
+        keywords: primarySeoKeywords.join(", ")
+      }
+    ]
+  }
+};
+
 export default function Home() {
   usePageMeta(
-    "LJP Custom Furniture Magelang | Kitchen Set, Lemari & Furniture Custom",
-    "Website company profile LJP Custom Furniture untuk inspirasi furniture custom, portfolio project, proses pengerjaan, FAQ, dan konsultasi WhatsApp di Kabupaten Magelang."
+    homeSeo.title,
+    homeSeo.description,
+    homeSeo
   );
 
   return (

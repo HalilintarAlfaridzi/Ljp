@@ -6,6 +6,37 @@ import CategoryFilter from "../components/catalog/CategoryFilter";
 import FinalCTA from "../components/common/FinalCTA";
 import { productCategories } from "../data/productCategories";
 import { usePageMeta } from "../utils/usePageMeta";
+import { primarySeoKeywords, serviceCatalog, siteUrl } from "../constants/seo";
+
+const catalogSeo = {
+  title: "Katalog LJP Furniture Magelang | Kitchen Set, Lemari, Meja & Rak Custom",
+  description:
+    "Inspirasi LJP Furniture Magelang untuk kitchen set custom, lemari pakaian, lemari bawah tangga, meja kerja, meja belajar, meja TV, meja makan, rak TV, rak buku, rak display, furniture kantor, cafe, restoran, hotel, villa, dan homestay.",
+  path: "/catalog",
+  keywords: [
+    ...primarySeoKeywords,
+    "katalog furniture custom Magelang",
+    "tempat bikin kitchen set Magelang",
+    "tempat bikin lemari custom Magelang",
+    "tempat bikin meja custom Magelang",
+    "rak custom Magelang",
+    "furniture hotel Magelang",
+    "furniture villa Magelang",
+    "furniture homestay Magelang"
+  ],
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    url: `${siteUrl}/catalog`,
+    name: "Katalog LJP Furniture Magelang",
+    description:
+      "Katalog inspirasi jasa custom furniture LJP di Magelang untuk kebutuhan rumah, kantor, cafe, restoran, hotel, villa, dan ruang komersial.",
+    inLanguage: "id-ID",
+    keywords: serviceCatalog.join(", "),
+    isPartOf: { "@id": `${siteUrl}/#website` },
+    about: { "@id": `${siteUrl}/#business` }
+  }
+};
 
 export default function Catalog() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -19,8 +50,9 @@ export default function Catalog() {
       : productCategories.filter((item) => item.category === activeCategory);
 
   usePageMeta(
-    "Inspirasi Furniture Custom | LJP Custom Furniture Magelang",
-    "Katalog inspirasi furniture custom LJP untuk kitchen set, wardrobe, office furniture, cafe restaurant furniture, custom cabinet, dan custom project di Magelang."
+    catalogSeo.title,
+    catalogSeo.description,
+    catalogSeo
   );
 
   return (
