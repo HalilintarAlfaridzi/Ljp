@@ -29,38 +29,38 @@ export const productCategories = [
   },
   {
     id: 3,
-    title: "Living Room Furniture",
-    slug: "living-room-furniture",
+    title: "Sofa",
+    slug: "Sofa",
     category: "Living Room Furniture",
     description:
-      "Furniture ruang keluarga seperti backdrop TV, cabinet, dan storage custom dengan tampilan modern.",
-    image: images.living,
-    tags: ["Backdrop TV", "Cabinet", "Modern Living"],
+      "Sofa dengan tampilan modern.",
+    image: images.Sofa,
+    tags: ["Backdrop TV", "Cabinet", "Modern Living", "Sofa"],
     suitableFor: ["Ruang keluarga", "Ruang tamu", "Hunian pribadi"],
     whatsappMessage:
-      "Halo LJP, saya ingin konsultasi furniture custom untuk ruang keluarga. Saya tertarik dengan backdrop TV atau cabinet custom."
+      "Halo LJP, saya ingin konsultasi furniture custom untuk ruang keluarga. Saya tertarik dengan Sofa"
   },
   {
     id: 4,
-    title: "Office Furniture",
+    title: "Partisi",
     slug: "office-furniture",
     category: "Office Furniture",
     description:
-      "Furniture kantor custom untuk meja kerja, cabinet, storage, dan kebutuhan ruang kerja profesional.",
-    image: images.office,
+      "Furniture partisi untuk storage.",
+    image: images.Partisi,
     tags: ["Office", "Work Desk", "Storage"],
-    suitableFor: ["Kantor", "Studio", "Ruang kerja"],
+    suitableFor: ["Kantor", "Studio", "Ruang kerja", "Storage"],
     whatsappMessage:
       "Halo LJP, saya ingin konsultasi furniture custom untuk kantor. Saya ingin diskusi kebutuhan meja kerja, storage, atau cabinet."
   },
   {
     id: 5,
-    title: "Cafe & Restaurant Furniture",
-    slug: "cafe-restaurant-furniture",
-    category: "Cafe & Restaurant Furniture",
+    title: "Meja Makan",
+    slug: "Meja Makan",
+    category: "Meja Makan",
     description:
       "Furniture custom untuk cafe dan restoran yang menyesuaikan konsep brand, layout, dan kenyamanan pelanggan.",
-    image: images.cafe,
+    image: images.MejaMakan,
     tags: ["Cafe", "Restaurant", "Commercial"],
     suitableFor: ["Cafe", "Restoran", "Coffee shop"],
     whatsappMessage:
@@ -68,28 +68,15 @@ export const productCategories = [
   },
   {
     id: 6,
-    title: "Custom Cabinet",
-    slug: "custom-cabinet",
-    category: "Custom Cabinet",
+    title: "Rak",
+    slug: "Rak Buku",
+    category: "Storage",
     description:
-      "Cabinet custom untuk kebutuhan penyimpanan, display, dan fungsi ruang yang lebih rapi.",
-    image: images.cabinet,
-    tags: ["Cabinet", "Storage", "Custom Function"],
-    suitableFor: ["Rumah", "Kantor", "Commercial space"],
+      "Rak dan storage custom untuk menyimpan barang dengan tampilan rapi dan menyesuaikan ukuran ruang.",
+    image: images.Rak,
+    tags: ["Storage", "Rak", "Custom Size"],
+    suitableFor: ["Rumah", "Kantor", "Ruang usaha"],
     whatsappMessage:
-      "Halo LJP, saya ingin konsultasi pembuatan custom cabinet. Saya ingin menyesuaikan fungsi, ukuran, dan finishing."
-  },
-  {
-    id: 7,
-    title: "Custom Project",
-    slug: "custom-project",
-    category: "Custom Project",
-    description:
-      "Solusi furniture custom untuk kebutuhan khusus yang menyesuaikan fungsi, ukuran, dan karakter ruangan.",
-    image: images.project,
-    tags: ["By Request", "Flexible Design", "Project Based"],
-    suitableFor: ["Rumah", "Bisnis", "Commercial space"],
-    whatsappMessage:
-      "Halo LJP, saya ingin konsultasi custom furniture untuk project khusus. Saya ingin diskusi kebutuhan ruang, konsep, dan estimasinya."
+      "Halo LJP, saya ingin konsultasi pembuatan rak atau storage custom. Saya ingin menyesuaikan ukuran, fungsi, dan finishing."
   }
 ];

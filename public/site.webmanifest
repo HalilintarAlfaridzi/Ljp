@@ -1,0 +1,14 @@
+{
+  "name": "LJP Custom Furniture",
+  "short_name": "LJP",
+  "icons": [
+    {
+      "src": "/images/logo/logo-ljp.webp",
+      "sizes": "640x640",
+      "type": "image/webp"
+    }
+  ],
+  "theme_color": "#3b2618",
+  "background_color": "#3b2618",
+  "display": "standalone"
+}

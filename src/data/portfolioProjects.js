@@ -3,22 +3,22 @@ import { images } from "../constants/images";
 export const portfolioProjects = [
   {
     id: 1,
-    title: "Modern Kitchen Set Project",
-    slug: "modern-kitchen-set-project",
-    category: "Kitchen Set",
+    title: "Project Balai Desa Borobudur",
+    slug: "Project Balai Desa Borobudur ",
+    category: "Office",
     type: "Residential",
     location: "Kabupaten Magelang",
     description:
-      "Kitchen set custom dengan konsep modern minimalis dan sentuhan natural wood untuk dapur rumah pribadi.",
+      "Project Backdrop dari Balai Desa Borobudur",
     challenge:
-      "Klien membutuhkan kitchen set yang rapi, fungsional, dan sesuai ukuran dapur.",
+      "Klien membutuhkan yang rapi, fungsional, dan sesuai ukuran .",
     solution:
       "LJP membuat layout kabinet custom dengan area penyimpanan yang menyesuaikan kebutuhan penggunaan harian.",
-    image: images.kitchen,
-    gallery: [images.kitchen, images.material, images.cabinet],
-    tags: ["Kitchen Set", "Residential", "Natural Wood"],
+    image: images.Project_Balai_desa_Borobudur,
+    gallery: [images.kitchen, images.material, images["TV CABINET"]],
+    tags: ["Backdrop", "Office", "Natural Wood"],
     whatsappMessage:
-      "Halo LJP, saya melihat portfolio Modern Kitchen Set Project dan ingin konsultasi project serupa."
+      "Halo LJP, saya melihat portfolio Set Project dan ingin konsultasi project serupa."
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ export const portfolioProjects = [
     solution:
       "Desain wardrobe dibuat custom mengikuti ukuran dinding dan kebutuhan penyimpanan klien.",
     image: images.wardrobe,
-    gallery: [images.wardrobe, images.living],
+    gallery: [images.wardrobe, images.Sofa],
     tags: ["Wardrobe", "Storage", "Minimalist"],
     whatsappMessage:
       "Halo LJP, saya tertarik dengan portfolio Wardrobe dan ingin konsultasi."
@@ -45,73 +45,73 @@ export const portfolioProjects = [
     slug: "cafe-furniture-custom-project",
     category: "Cafe",
     type: "Commercial Space",
-    location: "Kabupaten Magelang",
+    location: "Bandar Lampung, Pangkal Pinang",
     description:
       "Furniture custom untuk cafe dengan konsep hangat, natural, dan nyaman untuk pelanggan.",
     challenge:
       "Pemilik cafe membutuhkan furniture yang sesuai konsep tempat dan tetap kuat untuk penggunaan harian.",
     solution:
       "LJP menyesuaikan desain meja, seating, dan elemen furniture dengan layout cafe.",
-    image: images.cafe,
-    gallery: [images.cafe, images.material],
+    image: images.ProjectCafe,
+    gallery: [images["Meja Makan"], images.material],
     tags: ["Cafe", "Commercial", "Natural Wood"],
     whatsappMessage:
       "Halo LJP, saya melihat portfolio furniture cafe dan ingin konsultasi untuk tempat usaha saya."
   },
   {
     id: 4,
-    title: "Office Cabinet & Work Desk Project",
-    slug: "office-cabinet-work-desk-project",
+    title: "Project Balai Desa Kaliangkrik",
+    slug: "Project Balai Desa Kaliangkrik",
     category: "Office",
     type: "Office",
-    location: "Mertoyudan",
+    location: "Desa Kaliangkrik",
     description:
-      "Meja kerja dan cabinet kantor custom untuk ruang kerja yang lebih rapi, efisien, dan profesional.",
+      "Project Backdrop Balai Desa Kaliangkrik",
     challenge:
       "Area kantor membutuhkan storage terintegrasi tanpa membuat ruang terasa penuh.",
     solution:
       "Layout furniture dibuat mengikuti alur kerja tim dengan komposisi storage dan meja kerja yang seimbang.",
-    image: images.office,
-    gallery: [images.office, images.cabinet],
-    tags: ["Office", "Work Desk", "Storage"],
+    image: images["Project Balai desa Kaliangkrik"],
+    gallery: [images["Meja Kerja"], images["TV CABINET"]],
+    tags: ["Office", "Work Desk", "Storage", "Backdrop"],
     whatsappMessage:
       "Halo LJP, saya melihat portfolio Office Cabinet & Work Desk Project dan ingin konsultasi kebutuhan furniture kantor."
   },
   {
     id: 5,
-    title: "Modern Living Cabinet Project",
-    slug: "modern-living-cabinet-project",
+    title: "Divan",
+    slug: "Divan",
     category: "Living Room",
     type: "Residential",
     location: "Muntilan",
     description:
-      "Backdrop TV dan cabinet custom untuk ruang keluarga dengan tampilan clean dan storage tertutup.",
+      "Divan dengan tampilan clean dan storage tertutup.",
     challenge:
       "Ruang keluarga perlu terlihat rapi tanpa mengorbankan kebutuhan penyimpanan.",
     solution:
-      "Desain cabinet dibuat menyatu dengan backdrop TV dan mengikuti proporsi ruangan.",
-    image: images.living,
-    gallery: [images.living, images.cabinet],
-    tags: ["Backdrop TV", "Cabinet", "Residential"],
+      "Desain Divan yang sangat elegan.",
+    image: images.Divan,
+    gallery: [images.Sofa, images["TV CABINET"]],
+    tags: ["Kasur", "Divan", "Residential"],
     whatsappMessage:
       "Halo LJP, saya melihat portfolio Modern Living Cabinet Project dan ingin konsultasi backdrop TV atau cabinet custom."
   },
   {
     id: 6,
-    title: "Commercial Display Cabinet",
-    slug: "commercial-display-cabinet",
+    title: "Project Kamar KOS",
+    slug: "Kamar Kos",
     category: "Commercial Space",
     type: "Commercial Space",
     location: "Kota Magelang",
     description:
-      "Display cabinet custom untuk ruang bisnis yang membutuhkan area display rapi dan mudah diakses.",
+      "Interior dari kamar kos yang menyesuaikan dengan ukuran kamar.",
     challenge:
-      "Bisnis membutuhkan display yang terlihat profesional sekaligus praktis untuk operasional harian.",
+      "Membuat layout dan interior kamar kos sesuai dengan ukuran kamar.",
     solution:
-      "Cabinet dibuat dengan pembagian display dan penyimpanan yang menyesuaikan flow ruang.",
-    image: images.project,
-    gallery: [images.project, images.material],
-    tags: ["Commercial", "Display", "Cabinet"],
+      "Interior dibuat dengan pembagian display dan penyimpanan yang menyesuaikan flow ruang.",
+    image: images.KamarKOS,
+    gallery: [images["Project Interior RSIA Puri Agung Magelang"], images.material],
+    tags: ["Commercial", "Display", "Divan", "Interior"],
     whatsappMessage:
       "Halo LJP, saya tertarik dengan Commercial Display Cabinet dan ingin konsultasi project custom untuk ruang bisnis."
   }

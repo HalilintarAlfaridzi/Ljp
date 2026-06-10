@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
-import { Menu, MessageCircle, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { navigationItems } from "../constants/navigation";
 import { siteConfig } from "../constants/siteConfig";
+import { publicImages } from "../constants/images";
 import { whatsappMessages } from "../constants/whatsapp";
 import { formatWhatsappUrl } from "../utils/formatWhatsappUrl";
 import Button from "../components/common/Button";
@@ -28,10 +29,7 @@ export default function MainLayout() {
     <>
       <header className={`site-header ${isScrolled ? "scrolled" : ""}`}>
         <div className="container nav-inner">
-          <Link className="brand" to="/" aria-label="LJP Custom Furniture home">
-            <span>{siteConfig.brandShort}</span>
-            <strong>Custom Furniture</strong>
-          </Link>
+          <BrandLink />
 
           <nav className="desktop-nav" aria-label="Navigasi utama">
             {navigationItems.map((item) => (
@@ -48,7 +46,6 @@ export default function MainLayout() {
               rel="noreferrer"
               icon={false}
             >
-              <MessageCircle size={18} aria-hidden="true" />
               Konsultasi WhatsApp
             </Button>
           </div>
@@ -62,10 +59,7 @@ export default function MainLayout() {
       <div className={`mobile-drawer ${isOpen ? "open" : ""}`} aria-hidden={!isOpen}>
         <div className="drawer-panel">
           <div className="drawer-head">
-            <Link className="brand" to="/">
-              <span>{siteConfig.brandShort}</span>
-              <strong>Custom Furniture</strong>
-            </Link>
+            <BrandLink />
             <button type="button" onClick={() => setIsOpen(false)} aria-label="Tutup menu">
               <X size={24} aria-hidden="true" />
             </button>
@@ -98,15 +92,26 @@ export default function MainLayout() {
   );
 }
 
+function BrandLink({ className = "" }) {
+  const brandClassName = ["brand", className].filter(Boolean).join(" ");
+
+  return (
+    <Link className={brandClassName} to="/" aria-label="LJP Custom Furniture home">
+      <img className="brand-logo" src={publicImages.logo} alt="" aria-hidden="true" />
+      <strong>
+        <span>LJP</span>
+        <span>Custom Furniture</span>
+      </strong>
+    </Link>
+  );
+}
+
 function Footer() {
   return (
     <footer className="site-footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <Link className="brand brand-footer" to="/">
-            <span>{siteConfig.brandShort}</span>
-            <strong>Custom Furniture</strong>
-          </Link>
+          <BrandLink className="brand-footer" />
           <p>
             LJP Custom Furniture menghadirkan furniture custom yang rapi, fungsional, dan berkelas
             untuk hunian serta ruang bisnis Anda.
