@@ -3,8 +3,9 @@ export const siteConfig = {
   brandName: "LJP Custom Furniture",
   tagline: "Custom Furniture for Modern Living & Business Spaces",
   location: "Kabupaten Magelang",
-  address: "Kabupaten Magelang, dekat kantor KPU",
-  whatsappNumber: "6281234567890",
+  address:
+    "Mebel Langsung jaya putra/LJP, Jl Soekarno Hatta (Dekat kantor KPU), Banar Deyangan Mertoyudan Kabupaten Magelang",
+  whatsappNumber: "6282241290033",
   email: "info@ljpcustomfurniture.local",
   serviceAreas: [
     "Kabupaten Magelang",

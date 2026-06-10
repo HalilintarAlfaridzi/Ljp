@@ -64,7 +64,7 @@ export const images = {
     "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=82"
   ),
   "Project Interior RSIA Puri Agung Magelang": assetUrl(
-    "/images/bahanweb/ProjectRSIA"
+    "/images/bahanweb/ProjectRSIA.webp"
   ),
   "Project Balai desa Kaliangkrik": assetUrl(
     "/images/bahanweb/BalaiDesaKaliangkrik.webp"

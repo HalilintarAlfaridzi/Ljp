@@ -22,7 +22,7 @@ export const faqs = [
   {
     question: "Apakah LJP melayani area Kabupaten Magelang?",
     answer:
-      "Ya. LJP berbasis di Kabupaten Magelang, dekat kantor KPU, dan dapat melayani area sekitar sesuai kebutuhan project."
+      "Ya. LJP berbasis di Jl Soekarno Hatta, Banar Deyangan, Mertoyudan, Kabupaten Magelang (dekat kantor KPU), dan dapat melayani area sekitar sesuai kebutuhan project."
   },
   {
     question: "Apakah bisa memakai referensi dari Pinterest atau foto?",

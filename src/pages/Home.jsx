@@ -54,11 +54,12 @@ const homeSeo = {
         description: defaultSeo.description,
         url: siteUrl,
         image: defaultSeo.image,
-        telephone: "+62 812-3456-7890",
+        telephone: "+62 822-4129-0033",
         priceRange: "$$",
         address: {
           "@type": "PostalAddress",
-          streetAddress: "Dekat kantor KPU",
+          streetAddress:
+            "Mebel Langsung jaya putra/LJP, Jl Soekarno Hatta (Dekat kantor KPU), Banar Deyangan Mertoyudan",
           addressLocality: "Kabupaten Magelang",
           addressRegion: "Jawa Tengah",
           addressCountry: "ID"
