@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout.jsx";
 import Home from "../pages/Home.jsx";
 import Catalog from "../pages/Catalog.jsx";
 import Portfolio from "../pages/Portfolio.jsx";
+import PortfolioDetail from "../pages/PortfolioDetail.jsx";
 import About from "../pages/About.jsx";
 import FAQ from "../pages/FAQ.jsx";
 import Contact from "../pages/Contact.jsx";
@@ -15,6 +16,7 @@ export default function AppRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/portfolio/:slug" element={<PortfolioDetail />} />
         <Route path="/about" element={<About />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/contact" element={<Contact />} />

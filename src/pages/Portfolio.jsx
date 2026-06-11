@@ -9,9 +9,9 @@ import { usePageMeta } from "../utils/usePageMeta";
 import { primarySeoKeywords, siteUrl } from "../constants/seo";
 
 const portfolioSeo = {
-  title: "Portfolio LJP Custom Furniture Magelang | Project Rumah, Kantor & Cafe",
+  title: "Inspirasi Desain Furniture LJP Magelang | Kitchen Set, Wardrobe & Cafe",
   description:
-    "Portfolio LJP Custom Furniture Magelang untuk project kitchen set modern minimalis, lemari custom, furniture rumah, meja kantor, cabinet, furniture cafe, restoran, dan ruang komersial.",
+    "Kumpulan inspirasi desain furniture custom LJP untuk kitchen set, bedroom furniture, living room furniture, office furniture, dining room, dan commercial space.",
   path: "/portfolio",
   keywords: [
     ...primarySeoKeywords,
@@ -26,25 +26,41 @@ const portfolioSeo = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     url: `${siteUrl}/portfolio`,
-    name: "Portfolio LJP Custom Furniture Magelang",
+    name: "Inspirasi Desain Furniture LJP Custom Furniture Magelang",
     description:
-      "Portfolio project custom furniture LJP di Magelang untuk hunian, kantor, cafe, restoran, dan commercial space.",
+      "Kumpulan inspirasi desain furniture custom LJP untuk hunian, kantor, cafe, restoran, dan commercial space.",
     inLanguage: "id-ID",
     isPartOf: { "@id": `${siteUrl}/#website` },
     about: { "@id": `${siteUrl}/#business` }
   }
 };
 
+const portfolioCategoryOrder = [
+  "Kitchen Set",
+  "Bedroom Furniture",
+  "Living room furniture",
+  "Office furniture",
+  "Dining room",
+  "Commercial space"
+];
+
 export default function Portfolio() {
-  const [activeType, setActiveType] = useState("All Projects");
-  const categories = useMemo(
-    () => ["All Projects", ...new Set(portfolioProjects.map((project) => project.type))],
-    []
-  );
+  const [activeCategory, setActiveCategory] = useState("Semua Inspirasi");
+  const categories = useMemo(() => {
+    const projectCategories = new Set(portfolioProjects.map((project) => project.category));
+    const orderedCategories = portfolioCategoryOrder.filter((category) =>
+      projectCategories.has(category)
+    );
+    const remainingCategories = [...projectCategories].filter(
+      (category) => !portfolioCategoryOrder.includes(category)
+    );
+
+    return ["Semua Inspirasi", ...orderedCategories, ...remainingCategories];
+  }, []);
   const filteredProjects =
-    activeType === "All Projects"
+    activeCategory === "Semua Inspirasi"
       ? portfolioProjects
-      : portfolioProjects.filter((project) => project.type === activeType);
+      : portfolioProjects.filter((project) => project.category === activeCategory);
 
   usePageMeta(
     portfolioSeo.title,
@@ -55,30 +71,41 @@ export default function Portfolio() {
   return (
     <>
       <PageHero
-        eyebrow="Portfolio Project"
-        title="Bukti Visual dari Project Custom Furniture LJP."
-        description="Portfolio membantu calon klien melihat karakter pengerjaan, jenis kebutuhan yang bisa ditangani, dan hasil akhir yang rapi untuk hunian maupun ruang bisnis."
+        eyebrow="Inspirasi Desain"
+        title="Referensi Furniture Custom untuk Hunian dan Ruang Bisnis."
+        description="Kumpulan inspirasi ini membantu calon pelanggan membayangkan konsep desain, pilihan material, dan kemungkinan furniture custom yang dapat diwujudkan LJP."
       />
       <section className="section">
         <div className="container">
           <div className="section-top">
             <SectionHeader
-              eyebrow="Project Terpilih"
+              eyebrow="Inspirasi Terpilih"
               title="Dari Hunian Pribadi Hingga Commercial Space."
-              description="Lokasi project ditampilkan secara umum untuk menjaga privasi klien. Foto project asli dapat diganti ke aset final begitu tersedia."
+              description="Setiap halaman berisi kumpulan referensi visual bertema serupa yang dapat disesuaikan dengan ukuran ruang, material, finishing, dan kebutuhan pelanggan."
             />
           </div>
-          <CategoryFilter categories={categories} active={activeType} onChange={setActiveType} />
-          <div className="portfolio-grid">
-            {filteredProjects.map((project, index) => (
-              <ProjectCard project={project} featured={index === 0} key={project.id} />
-            ))}
-          </div>
+          <CategoryFilter categories={categories} active={activeCategory} onChange={setActiveCategory} />
+          {filteredProjects.length > 0 ? (
+            <div className="portfolio-grid">
+              {filteredProjects.map((project, index) => (
+                <ProjectCard project={project} featured={index === 0} key={project.id} />
+              ))}
+            </div>
+          ) : (
+            <div className="empty-state">
+              <p className="eyebrow">Inspirasi Kosong</p>
+              <h2>Inspirasi Belum Tersedia.</h2>
+              <p>
+                Referensi desain untuk kategori ini belum ditemukan. Pilih kategori lain atau
+                hubungi LJP untuk rekomendasi furniture custom yang paling sesuai.
+              </p>
+            </div>
+          )}
         </div>
       </section>
       <FinalCTA
-        title="Ingin Membuat Project Seperti Ini?"
-        description="Konsultasikan kebutuhan furniture custom Anda bersama LJP, mulai dari ruangan, fungsi, referensi desain, hingga estimasi pengerjaan."
+        title="Tertarik Dengan Desain Serupa?"
+        description="Konsultasikan kebutuhan furniture custom Anda bersama LJP, mulai dari ukuran ruang, fungsi, referensi desain, material, finishing, hingga estimasi pengerjaan."
         secondaryTo="/catalog"
       />
     </>

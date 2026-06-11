@@ -1,7 +1,11 @@
-Di halaman catalog kan ada filter nah ada beberapa kategori.
-Hapus kategori ini di catalog:
-1. Cafe & Restaurant Furniture
-2. Custom Cabinet
-3. Custom Project
-Tambahkan kategori ini di catalog:
-1. Meja Makan
+Di halaman Portfolio kan ada filter nah ada beberapa kategori.
+Hapus kategori ini di page Portfolio:
+1. TV Cabinet
+2. Backdrop Kantor
+3. Interior Kamar
+Tambahkan kategori ini di page Portfolio:
+1. Bedroom Furniture
+2. Living room furniture
+3. Office furniture
+4. Dining room
+5. Commercial space

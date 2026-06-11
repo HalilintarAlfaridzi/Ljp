@@ -26,43 +26,22 @@ export const images = {
     "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1100&q=82"
   ),
   kitchen: assetUrl("/images/bahanweb/Kitchen-Set-1.webp"),
-  kitchen2: assetUrl("/images/bahanweb/Kitchen-Set-1.webp"),
+  kitchen2: assetUrl("/images/bahanweb/Kitchen-Set2.webp"),
+  kitchen3: assetUrl("/images/bahanweb/Kitchen-Set3.webp"),
   Rak: assetUrl("/images/bahanweb/Rak.webp"),
   wardrobe: assetUrl("/images/bahanweb/wardrobe-1.webp"),
+  almari1: assetUrl("/images/bahanweb/Almari1.webp"),
+  almari2: assetUrl("/images/bahanweb/Almari2.webp"),
   Sofa: assetUrl("/images/bahanweb/sofa-1.webp"),
   Partisi: assetUrl("/images/bahanweb/Partisi.webp"),
-  Sofa2: assetUrl(
-    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=82"
-  ),
-  "Meja Kerja": assetUrl(
-    "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=82"
-  ),
   KamarKOS: assetUrl(
     "/images/bahanweb/KamarKOS.jpg"
-  ),
-  "Meja Makan": assetUrl(
-    "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1000&q=82"
   ),
   Divan: assetUrl(
     "/images/bahanweb/Divan.jpg"
   ),
   "Almari Pakaian": assetUrl("/images/home/wardrobe-1.webp"),
   "Almari Pakaian2": assetUrl("/images/home/wardrobe-1.webp"),
-  "Bed set anak": assetUrl(
-    "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=82"
-  ),
-  "Bed set anak2": assetUrl(
-    "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=82"
-  ),
-  "TV CABINET": assetUrl(
-    "https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=1000&q=82"
-  ),
-  "TV CABINET2": assetUrl(
-    "https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=1000&q=82"
-  ),
-  "Project Kamar Kos": assetUrl(
-    "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=82"
-  ),
   "Project Interior RSIA Puri Agung Magelang": assetUrl(
     "/images/bahanweb/ProjectRSIA.webp"
   ),
@@ -73,7 +52,14 @@ export const images = {
     "/images/bahanweb/BalaiDesa.jpg"
   ),
   ProjectCafe: assetUrl("/images/bahanweb/ProjecrCafe.png"),
+  Chair_Table_Cafe: assetUrl("/images/bahanweb/Table-Chair-Cafe.webp"),
+  Cafe_Interior: assetUrl("/images/bahanweb/Cafe-Interior.webp"),
   MejaMakan: assetUrl("/images/bahanweb/MejaMakan.webp"),
+  MejaMakan1: assetUrl("/images/bahanweb/MejaMakan1.webp"),
+  MejaMakan2: assetUrl("/images/bahanweb/MejaMakan2.webp"),
+  TV_Kabinet: assetUrl("/images/bahanweb/TV-Kabinet.webp"),
+  TV_Kabinet1: assetUrl("/images/bahanweb/TV-Kabinet1.webp"),
+  TV_Kabinet2: assetUrl("/images/bahanweb/TV-Kabinet2.webp")
 };
 
 export const publicImages = {

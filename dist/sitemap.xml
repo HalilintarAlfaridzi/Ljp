@@ -7,4 +7,64 @@
     <priority>1.0</priority>
   </url>
 
+  <url>
+    <loc>https://ljp.my.id/portfolio</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ljp.my.id/portfolio/kitchen-set-minimalis</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://ljp.my.id/portfolio/pantry-cafe-natural</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://ljp.my.id/portfolio/lemari-pakaian-modern</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://ljp.my.id/portfolio/wardrobe-kayu-hangat</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://ljp.my.id/portfolio/tv-cabinet-premium</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://ljp.my.id/portfolio/living-cabinet-natural</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://ljp.my.id/portfolio/backdrop-balai-desa-borobudur</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://ljp.my.id/portfolio/backdrop-balai-desa-kaliangkrik</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://ljp.my.id/portfolio/kamar-kos-custom</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

@@ -1,118 +1,178 @@
 import { images } from "../constants/images";
 
-export const portfolioProjects = [
+const portfolioItems = [
   {
-    id: 1,
-    title: "Project Balai Desa Borobudur",
-    slug: "Project Balai Desa Borobudur ",
-    category: "Office",
+    id: "1",
+    slug: "kitchen-set-minimalis",
+    title: "Kitchen Set",
+    category: "Kitchen Set",
     type: "Residential",
-    location: "Kabupaten Magelang",
+    style: "Modern Minimalist",
+    material: "Multipleks Premium",
+    finishing: "HPL Motif Kayu",
+    shortDescription:
+      "Kitchen set custom dengan desain modern minimalis untuk hunian pribadi.",
     description:
-      "Project Backdrop dari Balai Desa Borobudur",
-    challenge:
-      "Klien membutuhkan yang rapi, fungsional, dan sesuai ukuran .",
+      "Project ini dibuat untuk menghadirkan dapur yang rapi, fungsional, dan tetap terlihat premium. Desain dibuat menyesuaikan ukuran ruangan, kebutuhan penyimpanan, dan gaya interior rumah client.",
+    clientNeeds:
+      "Client membutuhkan dapur yang lebih tertata, mudah dibersihkan, dan memiliki area penyimpanan yang cukup tanpa membuat ruang terasa penuh.",
+    designConcept:
+      "Konsep modern minimalis dipilih dengan komposisi kabinet clean, tone kayu hangat, dan layout yang mengikuti alur aktivitas memasak harian.",
     solution:
-      "LJP membuat layout kabinet custom dengan area penyimpanan yang menyesuaikan kebutuhan penggunaan harian.",
-    image: images.Project_Balai_desa_Borobudur,
-    gallery: [images.kitchen, images.material, images["TV CABINET"]],
-    tags: ["Backdrop", "Office", "Natural Wood"],
+      "LJP membuat kabinet custom mengikuti ukuran ruang, membagi area penyimpanan berdasarkan frekuensi penggunaan, dan memilih finishing HPL motif kayu agar tampilan tetap hangat.",
+    finalResult:
+      "Dapur tampil lebih rapi, area kerja menjadi lebih efisien, dan keseluruhan ruang terasa premium tanpa kehilangan fungsi utama.",
+    thumbnail: images.kitchen,
+    featuredImage: images.kitchen,
+    galleryImages: [images.kitchen, images.kitchen2, images.kitchen3],
+    tags: ["Kitchen Set", "Minimalist", "Natural Wood"],
     whatsappMessage:
-      "Halo LJP, saya melihat portfolio Set Project dan ingin konsultasi project serupa."
+      "Halo LJP, saya melihat detail portfolio Kitchen Set Minimalis dan ingin konsultasi project serupa."
   },
   {
-    id: 2,
-    title: "Warm Wood Wardrobe Project",
-    slug: "warm-wood-wardrobe-project",
-    category: "Wardrobe",
-    type: "Residential",
-    location: "Magelang",
-    description:
-      "Wardrobe custom dengan tampilan clean dan kapasitas penyimpanan yang disesuaikan dengan kebutuhan kamar.",
-    challenge:
-      "Ruangan membutuhkan lemari pakaian yang tidak memakan banyak area namun tetap memiliki storage besar.",
-    solution:
-      "Desain wardrobe dibuat custom mengikuti ukuran dinding dan kebutuhan penyimpanan klien.",
-    image: images.wardrobe,
-    gallery: [images.wardrobe, images.Sofa],
-    tags: ["Wardrobe", "Storage", "Minimalist"],
-    whatsappMessage:
-      "Halo LJP, saya tertarik dengan portfolio Wardrobe dan ingin konsultasi."
-  },
-  {
-    id: 3,
-    title: "Cafe Furniture Custom Project",
-    slug: "cafe-furniture-custom-project",
-    category: "Cafe",
+    id: "2",
+    slug: "pantry-cafe-natural",
+    title: "Pantry Cafe",
+    category: "Commercial space",
     type: "Commercial Space",
-    location: "Bandar Lampung, Pangkal Pinang",
+    style: "Natural Contemporary",
+    material: "Multipleks dan Kayu Solid",
+    finishing: "HPL Natural Wood",
+    shortDescription:
+      "Area pantry dan storage cafe dengan karakter hangat untuk kebutuhan operasional harian.",
     description:
-      "Furniture custom untuk cafe dengan konsep hangat, natural, dan nyaman untuk pelanggan.",
-    challenge:
-      "Pemilik cafe membutuhkan furniture yang sesuai konsep tempat dan tetap kuat untuk penggunaan harian.",
+      "Project pantry cafe ini menggabungkan kebutuhan display, penyimpanan, dan area kerja yang compact. Setiap elemen dibuat agar mudah digunakan tim operasional sekaligus tetap selaras dengan suasana cafe.",
+    clientNeeds:
+      "Pemilik cafe membutuhkan area pantry yang terlihat rapi dari sisi pelanggan dan tetap kuat untuk ritme penggunaan harian.",
+    designConcept:
+      "Desain dibuat hangat dengan aksen natural wood, garis kabinet sederhana, dan pembagian area kerja yang tidak mengganggu flow pelayanan.",
     solution:
-      "LJP menyesuaikan desain meja, seating, dan elemen furniture dengan layout cafe.",
-    image: images.ProjectCafe,
-    gallery: [images["Meja Makan"], images.material],
-    tags: ["Cafe", "Commercial", "Natural Wood"],
+      "LJP menyesuaikan tinggi kabinet, area display, dan storage tertutup agar barang operasional mudah dijangkau namun tidak terlihat berantakan.",
+    finalResult:
+      "Area cafe terasa lebih matang secara visual, lebih efisien untuk staf, dan tetap nyaman dilihat pelanggan.",
+    thumbnail: images.ProjectCafe,
+    featuredImage: images.ProjectCafe,
+    galleryImages: [images.ProjectCafe, images.Chair_Table_Cafe, images.Cafe_Interior],
+    tags: ["Cafe", "Pantry", "Commercial"],
     whatsappMessage:
-      "Halo LJP, saya melihat portfolio furniture cafe dan ingin konsultasi untuk tempat usaha saya."
+      "Halo LJP, saya melihat detail portfolio Pantry Cafe Natural dan ingin konsultasi furniture cafe."
   },
   {
-    id: 4,
-    title: "Project Balai Desa Kaliangkrik",
-    slug: "Project Balai Desa Kaliangkrik",
-    category: "Office",
-    type: "Office",
-    location: "Desa Kaliangkrik",
-    description:
-      "Project Backdrop Balai Desa Kaliangkrik",
-    challenge:
-      "Area kantor membutuhkan storage terintegrasi tanpa membuat ruang terasa penuh.",
-    solution:
-      "Layout furniture dibuat mengikuti alur kerja tim dengan komposisi storage dan meja kerja yang seimbang.",
-    image: images["Project Balai desa Kaliangkrik"],
-    gallery: [images["Meja Kerja"], images["TV CABINET"]],
-    tags: ["Office", "Work Desk", "Storage", "Backdrop"],
-    whatsappMessage:
-      "Halo LJP, saya melihat portfolio Office Cabinet & Work Desk Project dan ingin konsultasi kebutuhan furniture kantor."
-  },
-  {
-    id: 5,
-    title: "Divan",
-    slug: "Divan",
-    category: "Living Room",
+    id: "3",
+    slug: "lemari-pakaian-modern",
+    title: "Lemari Pakaian",
+    category: "Bedroom Furniture",
     type: "Residential",
-    location: "Muntilan",
+    style: "Modern Clean",
+    material: "Multipleks Premium",
+    finishing: "HPL Solid Matte",
+    shortDescription:
+      "Lemari pakaian custom dengan storage besar dan tampilan clean untuk kamar modern.",
     description:
-      "Divan dengan tampilan clean dan storage tertutup.",
-    challenge:
-      "Ruang keluarga perlu terlihat rapi tanpa mengorbankan kebutuhan penyimpanan.",
+      "Project lemari pakaian ini dirancang untuk memaksimalkan storage kamar tanpa membuat ruangan terasa sempit. Pembagian ruang dalam lemari dibuat mengikuti kebiasaan penyimpanan pakaian client.",
+    clientNeeds:
+      "Client membutuhkan lemari yang muat banyak, rapi, dan ukurannya presisi dengan area dinding kamar.",
+    designConcept:
+      "Konsep clean modern digunakan dengan bidang pintu sederhana, tone warna netral, dan detail handle yang tidak ramai.",
     solution:
-      "Desain Divan yang sangat elegan.",
-    image: images.Divan,
-    gallery: [images.Sofa, images["TV CABINET"]],
-    tags: ["Kasur", "Divan", "Residential"],
+      "LJP membuat modul gantung, rak lipat, dan storage atas sesuai ukuran ruangan agar kapasitas penyimpanan meningkat secara signifikan.",
+    finalResult:
+      "Kamar terasa lebih tertata, kebutuhan penyimpanan terpenuhi, dan lemari menyatu dengan interior ruangan.",
+    thumbnail: images.wardrobe,
+    featuredImage: images.wardrobe,
+    galleryImages: [images.wardrobe, images.almari1, images.almari2],
+    tags: ["Wardrobe", "Storage", "Modern"],
     whatsappMessage:
-      "Halo LJP, saya melihat portfolio Modern Living Cabinet Project dan ingin konsultasi backdrop TV atau cabinet custom."
+      "Halo LJP, saya melihat detail portfolio Lemari Pakaian Modern dan ingin konsultasi wardrobe custom."
   },
   {
-    id: 6,
-    title: "Project Kamar KOS",
-    slug: "Kamar Kos",
-    category: "Commercial Space",
-    type: "Commercial Space",
+    id: "4",
+    slug: "meja-makan-keluarga",
+    title: "Meja Makan",
+    category: "Dining room",
+    type: "Residential",
+    style: "Warm Minimalist",
+    material: "Multipleks Premium",
+    finishing: "HPL Motif Kayu Matte",
+    shortDescription:
+      "Wardrobe custom bernuansa kayu hangat dengan pembagian storage yang fleksibel.",
+    description:
+      "Wardrobe ini dibuat untuk kamar dengan kebutuhan penyimpanan campuran, mulai dari pakaian gantung, pakaian lipat, hingga perlengkapan harian. Tampilan kayu dipilih agar suasana kamar terasa lebih nyaman.",
+    clientNeeds:
+      "Client ingin lemari yang rapi secara tampilan, tetapi tetap punya pembagian storage yang praktis untuk penggunaan setiap hari.",
+    designConcept:
+      "Gaya warm minimalist diterapkan melalui garis kabinet sederhana dan finishing kayu matte yang tidak terlalu mencolok.",
+    solution:
+      "LJP mengatur modul internal berdasarkan jenis barang dan membuat komposisi kabinet yang mengikuti dimensi dinding kamar.",
+    finalResult:
+      "Storage menjadi lebih terorganisir dan visual kamar terasa lebih hangat serta konsisten.",
+    thumbnail: images.MejaMakan,
+    featuredImage: images.MejaMakan,
+    galleryImages: [images.MejaMakan, images.MejaMakan1, images.MejaMakan2],
+    tags: ["Wardrobe", "Natural Wood", "Residential"],
+    whatsappMessage:
+      "Halo LJP, saya melihat detail portfolio Wardrobe Kayu Hangat dan ingin konsultasi lemari custom."
+  },
+  {
+    id: "5",
+    slug: "tv-cabinet-premium",
+    title: "TV Kabinet",
+    category: "Living room furniture",
+    type: "Residential",
     location: "Kota Magelang",
+    year: "2026",
+    style: "Premium Modern",
+    material: "Multipleks Premium dan Panel Dekoratif",
+    finishing: "HPL Matte dan Aksen Kayu",
+    shortDescription:
+      "Backdrop TV dan cabinet ruang keluarga dengan tampilan premium, clean, dan fungsional.",
     description:
-      "Interior dari kamar kos yang menyesuaikan dengan ukuran kamar.",
-    challenge:
-      "Membuat layout dan interior kamar kos sesuai dengan ukuran kamar.",
+      "Project TV cabinet ini dibuat untuk menyatukan area entertainment, storage tertutup, dan focal point ruang keluarga. Desain dirancang agar terlihat rapi sekaligus memudahkan penataan perangkat elektronik.",
+    clientNeeds:
+      "Client membutuhkan backdrop TV yang terlihat premium, memiliki storage, dan mampu menyembunyikan kabel agar ruang keluarga lebih bersih.",
+    designConcept:
+      "Komposisi modern premium dipilih dengan panel vertikal, kabinet bawah, dan aksen kayu untuk memberi kesan hangat.",
     solution:
-      "Interior dibuat dengan pembagian display dan penyimpanan yang menyesuaikan flow ruang.",
-    image: images.KamarKOS,
-    gallery: [images["Project Interior RSIA Puri Agung Magelang"], images.material],
-    tags: ["Commercial", "Display", "Divan", "Interior"],
+      "LJP membuat cabinet bawah custom, jalur kabel tersembunyi, dan bidang backdrop yang proporsional terhadap ukuran dinding.",
+    finalResult:
+      "Ruang keluarga memiliki focal point yang lebih kuat, storage bertambah, dan perangkat elektronik tertata lebih bersih.",
+    thumbnail: images.TV_Kabinet1,
+    featuredImage: images.TV_Kabinet1,
+    galleryImages: [images.TV_Kabinet1, images.TV_Kabinet, images.TV_Kabinet2],
+    tags: ["TV Cabinet", "Living Room", "Premium"],
     whatsappMessage:
-      "Halo LJP, saya tertarik dengan Commercial Display Cabinet dan ingin konsultasi project custom untuk ruang bisnis."
+      "Halo LJP, saya melihat detail portfolio TV Kabinet dan ingin konsultasi backdrop TV custom."
   }
 ];
+
+export const portfolioProjects = portfolioItems.map((project) => ({
+  ...project,
+  image: project.thumbnail,
+  gallery: project.galleryImages,
+  challenge: project.clientNeeds
+}));
+
+export function getPortfolioBySlug(slug) {
+  return portfolioProjects.find((project) => project.slug === slug);
+}
+
+export function getRelatedPortfolios(project, limit = 3) {
+  if (!project) return [];
+
+  const sameCategory = portfolioProjects.filter(
+    (item) => item.slug !== project.slug && item.category === project.category
+  );
+
+  if (sameCategory.length >= limit) {
+    return sameCategory.slice(0, limit);
+  }
+
+  const sameType = portfolioProjects.filter(
+    (item) =>
+      item.slug !== project.slug &&
+      item.category !== project.category &&
+      item.type === project.type
+  );
+
+  return [...sameCategory, ...sameType].slice(0, limit);
+}

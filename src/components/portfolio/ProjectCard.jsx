@@ -1,8 +1,12 @@
 import { motion } from "framer-motion";
-import Button from "../common/Button";
-import { formatWhatsappUrl } from "../../utils/formatWhatsappUrl";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function ProjectCard({ project, featured = false }) {
+  const detailPath = `/portfolio/${project.slug}`;
+  const image = project.thumbnail || project.image;
+  const description = project.shortDescription || project.description;
+
   return (
     <motion.article
       className={`project-card ${featured ? "project-card-featured" : ""}`}
@@ -11,36 +15,34 @@ export default function ProjectCard({ project, featured = false }) {
       viewport={{ once: true, amount: 0.25 }}
       transition={{ duration: 0.45 }}
     >
-      <div className="card-image">
-        <img loading="lazy" src={project.image} alt={`${project.title} oleh LJP di ${project.location}`} />
-        <span>{project.type}</span>
-      </div>
-      <div className="card-body">
-        <div className="project-meta">
+      <Link className="project-card-link" to={detailPath} aria-label={`Lihat inspirasi ${project.title}`}>
+        <div className="card-image">
+          <img
+            decoding="async"
+            loading={featured ? "eager" : "lazy"}
+            src={image}
+            alt={`${project.title} oleh LJP Custom Furniture`}
+          />
           <span>{project.category}</span>
-          <span>{project.location}</span>
         </div>
-        <h3>{project.title}</h3>
-        <p>{project.description}</p>
-        <div className="project-detail-grid">
-          <div>
-            <strong>Kebutuhan</strong>
-            <p>{project.challenge}</p>
+        <div className="card-body">
+          <div className="project-meta">
+            <span>{project.type}</span>
           </div>
-          <div>
-            <strong>Solusi</strong>
-            <p>{project.solution}</p>
+          <h3>{project.title}</h3>
+          <p>{description}</p>
+          <div className="project-detail-grid">
+            <div>
+              <strong>Arah Desain</strong>
+              <p>{project.solution}</p>
+            </div>
           </div>
+          <span className="btn btn-outline project-card-cta">
+            <span>Lihat Inspirasi</span>
+            <ArrowRight size={18} aria-hidden="true" />
+          </span>
         </div>
-        <Button
-          href={formatWhatsappUrl(project.whatsappMessage)}
-          target="_blank"
-          rel="noreferrer"
-          variant="outline"
-        >
-          Ingin Project Seperti Ini?
-        </Button>
-      </div>
+      </Link>
     </motion.article>
   );
 }
