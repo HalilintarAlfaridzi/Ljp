@@ -11,8 +11,8 @@ export default function NotFound() {
       <div className="container page-hero-inner">
         <p className="eyebrow">404</p>
         <h1>Halaman Tidak Ditemukan.</h1>
-        <p>Gunakan navigasi utama untuk kembali melihat profil, katalog inspirasi, atau portfolio LJP.</p>
-        <Button to="/">Kembali ke Home</Button>
+        <p>Gunakan navigasi utama untuk kembali melihat profil, catalog, atau portfolio LJP.</p>
+        <Button to="/">Kembali ke Beranda</Button>
       </div>
     </section>
   );

@@ -16,11 +16,11 @@ import Button from "../components/common/Button";
 import SectionHeader from "../components/common/SectionHeader";
 import FinalCTA from "../components/common/FinalCTA";
 import FAQAccordion from "../components/faq/FAQAccordion";
-import ProductCard from "../components/catalog/ProductCard";
 import ProjectCard from "../components/portfolio/ProjectCard";
+import InspirationCategoryCard from "../components/inspiration/InspirationCategoryCard";
 import { images } from "../constants/images";
 import { whatsappMessages } from "../constants/whatsapp";
-import { productCategories } from "../data/productCategories";
+import { inspirationCategories } from "../data/inspirationDesigns";
 import { portfolioProjects } from "../data/portfolioProjects";
 import { whyChooseUs } from "../data/whyChooseUs";
 import { processSteps } from "../data/processSteps";
@@ -213,17 +213,17 @@ export default function Home() {
         <div className="container">
           <div className="section-top">
             <SectionHeader
-              eyebrow="Katalog Inspirasi"
-              title="Inspirasi Furniture Custom untuk Berbagai Kebutuhan."
-              description="Pilih kategori sebagai referensi awal. Setiap desain dapat disesuaikan kembali dengan ukuran, material, warna, dan kebutuhan ruangan Anda."
+              eyebrow="Catalog"
+              title="Temukan Referensi Furniture Impian Anda"
+              description="Jelajahi catalog desain furniture sebagai referensi awal sebelum konsultasi. Setiap konsep dapat disesuaikan kembali dengan ukuran, material, warna, dan kebutuhan ruangan Anda."
             />
             <Button to="/catalog" variant="secondary">
-              Lihat Katalog Inspirasi
+              Lihat Semua Catalog
             </Button>
           </div>
-          <div className="product-grid product-grid-preview">
-            {productCategories.slice(0, 3).map((item) => (
-              <ProductCard item={item} key={item.id} />
+          <div className="inspiration-category-grid home-inspiration-grid">
+            {inspirationCategories.slice(0, 6).map((category) => (
+              <InspirationCategoryCard category={category} key={category.id} />
             ))}
           </div>
         </div>
@@ -267,7 +267,7 @@ export default function Home() {
           <div className="section-top">
             <SectionHeader
               eyebrow="Portfolio"
-              title="Project Custom Furniture yang Telah Kami Kerjakan."
+              title="Project yang Telah Kami Kerjakan"
               description="Dari hunian pribadi hingga ruang bisnis, LJP membantu menghadirkan furniture custom yang rapi, fungsional, dan sesuai karakter ruang."
             />
             <Button to="/portfolio" variant="secondary">

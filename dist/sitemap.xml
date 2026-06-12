@@ -8,61 +8,61 @@
   </url>
 
   <url>
-    <loc>https://ljp.my.id/portfolio</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://ljp.my.id/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://ljp.my.id/layanan</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ljp.my.id/portfolio/kitchen-set-minimalis</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://ljp.my.id/catalog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://ljp.my.id/portfolio/pantry-cafe-natural</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://ljp.my.id/portfolio</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://ljp.my.id/portfolio/lemari-pakaian-modern</loc>
+    <loc>https://ljp.my.id/portfolio/rsia-puri-agung-magelang</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ljp.my.id/portfolio/wardrobe-kayu-hangat</loc>
+    <loc>https://ljp.my.id/portfolio/project-balai-desa-borobudur</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ljp.my.id/portfolio/tv-cabinet-premium</loc>
+    <loc>https://ljp.my.id/portfolio/balai-desa-kaliangkrik</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ljp.my.id/portfolio/living-cabinet-natural</loc>
+    <loc>https://ljp.my.id/portfolio/project-dapm-salaman</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ljp.my.id/portfolio/backdrop-balai-desa-borobudur</loc>
+    <loc>https://ljp.my.id/faq</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://ljp.my.id/portfolio/backdrop-balai-desa-kaliangkrik</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://ljp.my.id/portfolio/kamar-kos-custom</loc>
+    <loc>https://ljp.my.id/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

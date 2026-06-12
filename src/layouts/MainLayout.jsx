@@ -138,7 +138,7 @@ function Footer() {
           </ul>
         </div>
         <div>
-          <h2>Contact</h2>
+          <h2>Kontak</h2>
           <ul>
             <li>{siteConfig.address}</li>
             <li>{siteConfig.location}</li>

@@ -5,9 +5,9 @@ export const faqs = [
       "Ya. LJP melayani pembuatan furniture custom yang dapat disesuaikan dengan ukuran, layout, fungsi, dan gaya ruangan."
   },
   {
-    question: "Apakah katalog di website merupakan produk ready stock?",
+    question: "Apakah catalog di website merupakan produk ready stock?",
     answer:
-      "Tidak. Katalog di website berfungsi sebagai inspirasi desain. Setiap furniture dapat disesuaikan kembali dengan kebutuhan klien."
+      "Tidak. Halaman Catalog berfungsi sebagai referensi model, gaya, warna, dan material. Setiap furniture dapat disesuaikan kembali dengan kebutuhan klien."
   },
   {
     question: "Bagaimana cara mendapatkan estimasi harga?",

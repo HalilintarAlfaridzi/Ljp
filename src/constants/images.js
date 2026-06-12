@@ -42,15 +42,17 @@ export const images = {
   ),
   "Almari Pakaian": assetUrl("/images/home/wardrobe-1.webp"),
   "Almari Pakaian2": assetUrl("/images/home/wardrobe-1.webp"),
-  "Project Interior RSIA Puri Agung Magelang": assetUrl(
-    "/images/bahanweb/ProjectRSIA.webp"
-  ),
-  "Project Balai desa Kaliangkrik": assetUrl(
-    "/images/bahanweb/BalaiDesaKaliangkrik.webp"
-  ),
-  Project_Balai_desa_Borobudur: assetUrl(
-    "/images/bahanweb/BalaiDesa.jpg"
-  ),
+  Project_RSIA: assetUrl("/images/bahanweb/RSIA.webp"),
+  Project_RSIA1: assetUrl("/images/bahanweb/RSIA1.webp"),
+  Proses_RSIA: assetUrl("/images/bahanweb/RSIA2.webp"),
+  "Project Balai desa Kaliangkrik": assetUrl("/images/bahanweb/BalaiDesaKaliangkrik.webp"),
+  balaiDesaKaliangkrik: assetUrl("/images/bahanweb/BalaiDesaKaliangkrik.webp"),
+  balaiDesaKaliangkrik1: assetUrl("/images/bahanweb/ProsesBalaiDesaKaliangkrik.webp"),
+  balaiDesaKaliangkrik2: assetUrl("/images/bahanweb/BalaiDesaKaliangkrik1.webp"),
+  Project_Balai_desa_Borobudur: assetUrl("/images/bahanweb/BalaiDesa.jpg"),
+  balaiDesaBorobudur: assetUrl("/images/bahanweb/BalaiDesa.jpg"),
+  balaiDesaBorobudur1: assetUrl("/images/bahanweb/ProsesBalaiDesaBorobudur.webp"),
+  balaiDesaBorobudur2: assetUrl("/images/bahanweb/BalaiDesaBorobudur.webp"),
   ProjectCafe: assetUrl("/images/bahanweb/ProjecrCafe.png"),
   Chair_Table_Cafe: assetUrl("/images/bahanweb/Table-Chair-Cafe.webp"),
   Cafe_Interior: assetUrl("/images/bahanweb/Cafe-Interior.webp"),
@@ -59,7 +61,10 @@ export const images = {
   MejaMakan2: assetUrl("/images/bahanweb/MejaMakan2.webp"),
   TV_Kabinet: assetUrl("/images/bahanweb/TV-Kabinet.webp"),
   TV_Kabinet1: assetUrl("/images/bahanweb/TV-Kabinet1.webp"),
-  TV_Kabinet2: assetUrl("/images/bahanweb/TV-Kabinet2.webp")
+  TV_Kabinet2: assetUrl("/images/bahanweb/TV-Kabinet2.webp"),
+  Project_DAPM: assetUrl("/images/bahanweb/DAPMSalaman.webp"),
+  Proses_DAPM: assetUrl("/images/bahanweb/ProsesDAPMSalaman1.webp"),
+  Proses_DAPM1: assetUrl("/images/bahanweb/ProsesDAPMSalaman.webp")
 };
 
 export const publicImages = {

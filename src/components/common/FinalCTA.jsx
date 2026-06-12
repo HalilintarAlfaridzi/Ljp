@@ -5,7 +5,8 @@ import { whatsappMessages } from "../../constants/whatsapp";
 export default function FinalCTA({
   title = "Punya Ide Furniture Custom untuk Rumah atau Bisnis Anda?",
   description = "Ceritakan kebutuhan ruangan Anda kepada LJP. Kami bantu arahkan pilihan desain, material, dan estimasi pengerjaan yang sesuai.",
-  secondaryTo = "/catalog"
+  secondaryTo = "/catalog",
+  secondaryLabel = "Lihat Catalog"
 }) {
   return (
     <section className="final-cta-section">
@@ -21,7 +22,7 @@ export default function FinalCTA({
               Konsultasi WhatsApp Sekarang
             </Button>
             <Button to={secondaryTo} variant="light">
-              Lihat Katalog Inspirasi
+              {secondaryLabel}
             </Button>
           </div>
         </div>

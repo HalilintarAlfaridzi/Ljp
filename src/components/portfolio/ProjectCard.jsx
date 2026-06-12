@@ -15,7 +15,7 @@ export default function ProjectCard({ project, featured = false }) {
       viewport={{ once: true, amount: 0.25 }}
       transition={{ duration: 0.45 }}
     >
-      <Link className="project-card-link" to={detailPath} aria-label={`Lihat inspirasi ${project.title}`}>
+      <Link className="project-card-link" to={detailPath} aria-label={`Lihat detail project ${project.title}`}>
         <div className="card-image">
           <img
             decoding="async"
@@ -27,18 +27,24 @@ export default function ProjectCard({ project, featured = false }) {
         </div>
         <div className="card-body">
           <div className="project-meta">
-            <span>{project.type}</span>
+            <span>{project.category}</span>
+            <span>{project.location}</span>
+            <span>{project.year}</span>
           </div>
           <h3>{project.title}</h3>
           <p>{description}</p>
           <div className="project-detail-grid">
             <div>
-              <strong>Arah Desain</strong>
-              <p>{project.solution}</p>
+              <strong>Jenis Furniture</strong>
+              <p>{project.furnitureType}</p>
+            </div>
+            <div>
+              <strong>Style</strong>
+              <p>{project.style}</p>
             </div>
           </div>
           <span className="btn btn-outline project-card-cta">
-            <span>Lihat Inspirasi</span>
+            <span>Lihat Detail Project</span>
             <ArrowRight size={18} aria-hidden="true" />
           </span>
         </div>

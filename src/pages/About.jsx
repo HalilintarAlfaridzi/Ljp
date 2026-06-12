@@ -100,7 +100,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <FinalCTA secondaryTo="/portfolio" />
+      <FinalCTA secondaryTo="/portfolio" secondaryLabel="Lihat Portfolio" />
     </>
   );
 }

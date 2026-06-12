@@ -1,8 +1,9 @@
 export const navigationItems = [
-  { label: "Home", href: "/" },
+  { label: "Beranda", href: "/" },
+  { label: "Tentang Kami", href: "/about" },
+  { label: "Layanan", href: "/layanan" },
   { label: "Catalog", href: "/catalog" },
   { label: "Portfolio", href: "/portfolio" },
-  { label: "About", href: "/about" },
   { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "/contact" }
+  { label: "Kontak", href: "/contact" }
 ];

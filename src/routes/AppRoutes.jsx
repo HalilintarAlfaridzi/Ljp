@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout.jsx";
 import Home from "../pages/Home.jsx";
+import Services from "../pages/Services.jsx";
 import Catalog from "../pages/Catalog.jsx";
 import Portfolio from "../pages/Portfolio.jsx";
 import PortfolioDetail from "../pages/PortfolioDetail.jsx";
@@ -14,6 +15,7 @@ export default function AppRoutes() {
     <Routes>
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
+        <Route path="/layanan" element={<Services />} />
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/portfolio/:slug" element={<PortfolioDetail />} />
