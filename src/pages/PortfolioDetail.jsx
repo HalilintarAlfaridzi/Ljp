@@ -189,6 +189,9 @@ export default function PortfolioDetail() {
               alt={`${project.title} oleh LJP Custom Furniture`}
               decoding="async"
               loading="eager"
+              fetchPriority="high"
+              width="1312"
+              height="816"
             />
             <div className="portfolio-detail-hero-copy">
               <p className="eyebrow">{project.category}</p>
@@ -259,7 +262,10 @@ export default function PortfolioDetail() {
                     src={image}
                     alt={`${project.title} ${index + 1}`}
                     loading={index === 0 ? "eager" : "lazy"}
+                    fetchPriority={index === 0 ? "high" : "auto"}
                     decoding="async"
+                    width="1312"
+                    height="816"
                   />
                 </button>
               ))}
@@ -374,7 +380,13 @@ export default function PortfolioDetail() {
             onTouchStart={handleLightboxTouchStart}
             onTouchEnd={handleLightboxTouchEnd}
           >
-            <img src={selectedImage} alt={`${project.title} fullscreen`} />
+            <img
+              src={selectedImage}
+              alt={`${project.title} fullscreen`}
+              decoding="async"
+              width="1312"
+              height="816"
+            />
             <figcaption>
               {project.title} - {selectedImageIndex + 1}/{galleryImages.length}
             </figcaption>

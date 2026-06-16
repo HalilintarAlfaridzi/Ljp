@@ -39,11 +39,11 @@ const categoryItems = [
         style: "Modern Minimalis",
         image: images.kitchen2,
         description:
-          "Desain kabinet putih bersih dengan aksen kayu yang cocok untuk dapur compact dan rumah modern.",
+          "Desain kabinet putih bersih dengan aksen hitam yang cocok untuk dapur compact dan rumah modern.",
         materials: ["Multipleks Premium", "HPL Solid Matte", "Top table granit"],
-        colors: ["Putih Matte", "Light Wood", "Abu Muda"],
+        colors: ["Putih Matte", "Black", "Abu Muda"],
         benefits: [
-          "Memberi kesan ruang lebih luas",
+          "Tidak mudah terlihat kotor",
           "Area kerja mudah dibersihkan",
           "Cocok untuk layout linear maupun letter L"
         ]
@@ -54,13 +54,13 @@ const categoryItems = [
         style: "Luxury Modern",
         image: images.kitchen3,
         description:
-          "Inspirasi dapur dengan proporsi kabinet tinggi, aksen gelap, dan finishing premium untuk tampilan lebih elegan.",
+          "Inspirasi dapur dengan proporsi kabinet tinggi, aksen kayu, dan finishing premium untuk tampilan lebih elegan.",
         materials: ["Multipleks Premium", "HPL Premium", "Aksen panel dekoratif"],
         colors: ["Charcoal", "Walnut", "Champagne"],
         benefits: [
           "Tampilan dapur lebih berkelas",
           "Kabinet tinggi memaksimalkan penyimpanan",
-          "Aksen gelap memberi karakter tegas"
+          "Aksen kayu"
         ]
       }
     ]
@@ -98,12 +98,12 @@ const categoryItems = [
         ]
       },
       {
-        id: "wardrobe-natural-wood",
-        title: "Wardrobe Natural Wood",
+        id: "wardrobe",
+        title: "Wardrobe ",
         style: "Scandinavian",
         image: images.almari1,
         description:
-          "Inspirasi lemari pakaian bernuansa kayu natural untuk kamar yang ingin terasa hangat dan ringan.",
+          "Inspirasi lemari pakaian bernuansa hijau untuk kamar yang ingin terasa hangat dan ringan.",
         materials: ["Multipleks Premium", "HPL Motif Kayu", "Handle tanam"],
         colors: ["Natural Oak", "Ivory", "Light Beige"],
         benefits: [
@@ -113,8 +113,8 @@ const categoryItems = [
         ]
       },
       {
-        id: "wardrobe-sliding-compact",
-        title: "Wardrobe Sliding Compact",
+        id: "wardrobe",
+        title: "Wardrobe Minimalis",
         style: "Modern Minimalis",
         image: images.almari2,
         description:
@@ -162,8 +162,8 @@ const categoryItems = [
         ]
       },
       {
-        id: "divan-storage-modern",
-        title: "Divan Storage Modern",
+        id: "divan-storage",
+        title: "Divan Storage",
         style: "Modern Minimalis",
         image: images.Divan,
         description:
@@ -176,21 +176,6 @@ const categoryItems = [
           "Membuat kamar lebih rapi tanpa banyak furniture tambahan"
         ]
       },
-      {
-        id: "bedroom-set-japandi-calm",
-        title: "Bedroom Set Japandi Calm",
-        style: "Japandi",
-        image: images.wardrobe,
-        description:
-          "Kombinasi wardrobe, dipan, dan kabinet samping dengan warna lembut untuk suasana kamar yang lebih tenang.",
-        materials: ["Multipleks Premium", "HPL Oak", "Aksen panel datar"],
-        colors: ["Beige", "Natural Oak", "Off White"],
-        benefits: [
-          "Seluruh furniture terasa menyatu",
-          "Gaya japandi cocok untuk suasana istirahat",
-          "Mudah dikombinasikan dengan linen warna netral"
-        ]
-      }
     ]
   },
   {
@@ -289,36 +274,6 @@ const categoryItems = [
           "Cocok untuk kantor kecil maupun studio"
         ]
       },
-      {
-        id: "office-backdrop-formal",
-        title: "Office Backdrop Formal",
-        style: "Modern Professional",
-        image: images.Project_Balai_desa_Borobudur,
-        description:
-          "Backdrop dan kabinet formal untuk area pelayanan, ruang meeting, atau ruang publik yang membutuhkan kesan profesional.",
-        materials: ["Multipleks Premium", "HPL Premium", "Panel dekoratif"],
-        colors: ["Dark Walnut", "Ivory", "Gold Accent"],
-        benefits: [
-          "Ruang terlihat lebih representatif",
-          "Area display dan penyimpanan lebih tertata",
-          "Mendukung identitas visual institusi atau bisnis"
-        ]
-      },
-      {
-        id: "office-storage-clean",
-        title: "Office Storage Clean",
-        style: "Modern Minimalis",
-        image: images.Rak,
-        description:
-          "Storage kantor dengan susunan rak terbuka dan tertutup untuk dokumen, display, serta kebutuhan kerja harian.",
-        materials: ["Multipleks Premium", "HPL Matte", "Aksesoris kabinet"],
-        colors: ["Putih", "Light Oak", "Graphite"],
-        benefits: [
-          "Dokumen lebih mudah dikelompokkan",
-          "Tampilan kantor tetap bersih",
-          "Dimensi dapat mengikuti kebutuhan arsip"
-        ]
-      }
     ]
   },
   {
@@ -338,21 +293,6 @@ const categoryItems = [
       "Meja Cafe Custom Magelang"
     ],
     inspirations: [
-      {
-        id: "cafe-pantry-natural",
-        title: "Cafe Pantry Natural",
-        style: "Industrial",
-        image: images.ProjectCafe,
-        description:
-          "Area pantry cafe dengan storage, display, dan aksen kayu untuk membuat operasional lebih rapi dari sisi pelanggan.",
-        materials: ["Multipleks Premium", "HPL Natural Wood", "Top table tahan pakai"],
-        colors: ["Natural Wood", "Hitam Doff", "Cream"],
-        benefits: [
-          "Area kerja staf lebih efisien",
-          "Barang operasional tidak terlihat berantakan",
-          "Visual cafe terasa lebih matang"
-        ]
-      },
       {
         id: "cafe-table-chair-warm",
         title: "Cafe Table Chair Warm",
@@ -403,48 +343,18 @@ const categoryItems = [
     ],
     inspirations: [
       {
-        id: "custom-rak-display-modern",
-        title: "Custom Rak Display Modern",
+        id: "custom-rak-display-buku",
+        title: "Custom Rak Display Buku",
         style: "Modern Minimalis",
         image: images.Rak,
         description:
-          "Rak display custom dengan kombinasi bidang terbuka dan tertutup untuk rumah, kantor, maupun ruang usaha.",
+          "Rak display custom dengan kombinasi bidang terbuka dan tertutup untuk rumah, kantor, maupun perpustakaan.",
         materials: ["Multipleks Premium", "HPL Matte", "Aksesoris kabinet"],
         colors: ["Putih Doff", "Natural Oak", "Charcoal"],
         benefits: [
           "Display terlihat lebih terkurasi",
           "Storage tertutup menyimpan barang yang tidak perlu terlihat",
           "Dimensi dapat mengikuti area dinding"
-        ]
-      },
-      {
-        id: "custom-partisi-elegan",
-        title: "Custom Partisi Elegan",
-        style: "Contemporary",
-        image: images.Partisi,
-        description:
-          "Partisi custom yang dapat berfungsi sebagai pembatas ruang, aksen visual, sekaligus storage tambahan.",
-        materials: ["Multipleks Premium", "HPL Premium", "Rangka penguat"],
-        colors: ["Walnut", "Ivory", "Black"],
-        benefits: [
-          "Ruang terbagi tanpa terasa sempit",
-          "Bisa dibuat sebagai focal point",
-          "Fungsi pembatas dan penyimpanan menyatu"
-        ]
-      },
-      {
-        id: "custom-cabinet-serbaguna",
-        title: "Custom Cabinet Serbaguna",
-        style: "Modern Minimalis",
-        image: images.material,
-        description:
-          "Cabinet serbaguna untuk kebutuhan penyimpanan khusus dengan layout internal yang dapat dirancang dari awal.",
-        materials: ["Multipleks Premium", "HPL Solid", "Hardware premium"],
-        colors: ["Warm Grey", "Off White", "Natural Wood"],
-        benefits: [
-          "Layout internal mengikuti jenis barang",
-          "Tampilan dapat menyatu dengan interior",
-          "Cocok untuk kebutuhan rumah maupun bisnis"
         ]
       }
     ]

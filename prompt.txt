@@ -1,2 +1,87 @@
-Tugas kamu sekarang:
-1. Menyesuaikan isi di portfolioProject.js sesuai dengan image.
+Jelaskan project website ini secara detail agar saya benar-benar paham sebagai developer pemula React.
+
+Tugas kamu:
+Analisis seluruh struktur project, tapi jangan langsung mengubah kode apa pun.
+
+Fokus penjelasan:
+
+1. Gambaran besar website ini
+
+   * Website ini tujuannya untuk apa
+   * Halaman apa saja yang ada
+   * Flow user dari awal sampai akhir
+   * Fitur utama yang tersedia
+
+2. Struktur folder dan file
+
+   * Jelaskan fungsi setiap folder penting
+   * Jelaskan fungsi file-file utama
+   * Jelaskan file mana yang menjadi entry point aplikasi
+   * Jelaskan hubungan antar file
+
+3. Alur React
+
+   * Component utama apa saja
+   * Component mana yang menjadi parent
+   * Component mana yang menjadi child
+   * Data mengalir dari mana ke mana
+   * Props apa saja yang dikirim
+   * State apa saja yang digunakan
+   * Event apa saja yang terjadi saat user berinteraksi
+
+4. Routing / halaman
+
+   * Jelaskan route apa saja yang ada
+   * Route mana yang public
+   * Route mana yang detail page
+   * Jelaskan bagaimana user berpindah halaman
+   * Jelaskan file mana yang mengatur routing
+
+5. Data
+
+   * Data berasal dari mana
+   * Apakah data masih dummy/static atau dari backend
+   * File mana yang menyimpan data
+   * Struktur data penting seperti array/object
+   * Jelaskan cara data ditampilkan ke UI
+
+6. Styling dan UI
+
+   * Jelaskan sistem styling yang digunakan
+   * Jelaskan pola layout utama
+   * Jelaskan bagian responsive/mobile
+   * Jelaskan komponen UI yang sering dipakai ulang
+
+7. Fitur penting
+   Untuk setiap fitur, jelaskan:
+
+   * Tujuan fitur
+   * File yang terlibat
+   * Alur kerja fitur
+   * Data yang dipakai
+   * Component yang digunakan
+   * Cara mengetes fitur tersebut
+
+8. Bagian kode yang wajib saya pahami
+
+   * Pilih bagian kode paling penting
+   * Jelaskan baris per baris dengan bahasa sederhana
+   * Jelaskan kenapa kode itu dibutuhkan
+   * Jelaskan apa yang terjadi kalau kode itu dihapus/diubah
+
+10. Rekomendasi belajar dari project ini
+
+* Konsep React apa yang harus saya pelajari dari project ini
+* Urutan file yang sebaiknya saya baca
+* Fitur kecil apa yang bisa saya coba ubah sendiri
+* Latihan kecil dari project ini agar saya makin paham
+
+Format jawaban:
+
+* Gunakan bahasa Indonesia yang sederhana
+* Jelaskan seperti mentor ngajarin pemula
+* Jangan terlalu singkat
+* Jangan cuma kasih teori, hubungkan langsung dengan file dan kode di project
+* Kalau menjelaskan kode, sertakan potongan kode penting saja
+* Jangan mengubah file apa pun sebelum saya minta
+* Setelah selesai, beri ringkasan: “Kalau kamu cuma sempat belajar 5 hal dari project ini, pelajari ini…”

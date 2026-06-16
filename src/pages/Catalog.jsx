@@ -161,7 +161,13 @@ export default function Catalog() {
             </button>
 
             <div className="inspiration-modal-media">
-              <img src={selectedItem.image} alt={selectedItem.title} />
+              <img
+                src={selectedItem.image}
+                alt={selectedItem.title}
+                decoding="async"
+                width="1200"
+                height="900"
+              />
             </div>
 
             <div className="inspiration-modal-content">

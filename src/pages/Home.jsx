@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import {
   BadgeCheck,
   Building2,
@@ -118,12 +117,7 @@ export default function Home() {
     <>
       <section className="hero-section">
         <div className="container hero-grid">
-          <motion.div
-            className="hero-copy"
-            initial={{ opacity: 0, y: 28 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65 }}
-          >
+          <div className="hero-copy">
             <p className="eyebrow">LJP Custom Furniture Magelang</p>
             <h1>Furniture Custom untuk Hunian & Ruang Bisnis.</h1>
             <p>
@@ -143,20 +137,23 @@ export default function Home() {
                 <span key={badge}>{badge}</span>
               ))}
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="hero-media"
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.75, delay: 0.12 }}
-          >
-            <img src={images.hero} alt="Interior modern dengan furniture custom natural wood" />
+          <div className="hero-media">
+            <img
+              src={images.hero}
+              alt="Interior modern dengan furniture custom natural wood"
+              width="1200"
+              height="900"
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
+            />
             <div className="hero-stat">
               <strong>Custom</strong>
               <span>Sesuai kebutuhan ruang, fungsi, dan gaya visual.</span>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -176,15 +173,16 @@ export default function Home() {
 
       <section className="section about-preview">
         <div className="container split-grid">
-          <motion.div
-            className="image-stack"
-            initial={{ opacity: 0, x: -26 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.55 }}
-          >
-            <img src={images.about} alt="Detail furniture custom natural wood LJP" loading="lazy" />
-          </motion.div>
+          <div className="image-stack">
+            <img
+              src={images.about}
+              alt="Detail furniture custom natural wood LJP"
+              loading="lazy"
+              decoding="async"
+              width="1100"
+              height="825"
+            />
+          </div>
           <div>
             <SectionHeader
               eyebrow="Tentang LJP"
@@ -237,25 +235,29 @@ export default function Home() {
               title="Kenapa Memilih LJP?"
               description="LJP diposisikan sebagai partner furniture custom, bukan katalog harga satuan. Fokusnya adalah kebutuhan ruang, fungsi, tampilan, dan pengerjaan yang rapi."
             />
-            <img className="why-image" src={images.workshop} alt="Ruang interior modern dengan furniture custom" loading="lazy" />
+            <img
+              className="why-image"
+              src={images.workshop}
+              alt="Ruang interior modern dengan furniture custom"
+              loading="lazy"
+              decoding="async"
+              width="1100"
+              height="825"
+            />
           </div>
           <div className="why-card-grid">
             {whyChooseUs.map((item, index) => {
               const icons = [Ruler, HomeIcon, Sparkles, MessageCircle, ClipboardCheck, Trees];
               const Icon = icons[index] || BadgeCheck;
               return (
-                <motion.article
+                <article
                   className="why-card"
                   key={item.title}
-                  initial={{ opacity: 0, y: 18 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.25 }}
-                  transition={{ duration: 0.4, delay: index * 0.04 }}
                 >
                   <Icon size={22} aria-hidden="true" />
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
-                </motion.article>
+                </article>
               );
             })}
           </div>
@@ -331,7 +333,15 @@ export default function Home() {
               Tanya Pilihan Material
             </Button>
           </div>
-          <img className="feature-image" src={images.material} alt="Detail material dan finishing furniture custom" loading="lazy" />
+          <img
+            className="feature-image"
+            src={images.material}
+            alt="Detail material dan finishing furniture custom"
+            loading="lazy"
+            decoding="async"
+            width="1100"
+            height="825"
+          />
         </div>
       </section>
 

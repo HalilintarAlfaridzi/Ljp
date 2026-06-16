@@ -1,28 +1,34 @@
+import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout.jsx";
 import Home from "../pages/Home.jsx";
-import Services from "../pages/Services.jsx";
-import Catalog from "../pages/Catalog.jsx";
-import Portfolio from "../pages/Portfolio.jsx";
-import PortfolioDetail from "../pages/PortfolioDetail.jsx";
-import About from "../pages/About.jsx";
-import FAQ from "../pages/FAQ.jsx";
-import Contact from "../pages/Contact.jsx";
-import NotFound from "../pages/NotFound.jsx";
+
+const Services = lazy(() => import("../pages/Services.jsx"));
+const Catalog = lazy(() => import("../pages/Catalog.jsx"));
+const Portfolio = lazy(() => import("../pages/Portfolio.jsx"));
+const PortfolioDetail = lazy(() => import("../pages/PortfolioDetail.jsx"));
+const About = lazy(() => import("../pages/About.jsx"));
+const FAQ = lazy(() => import("../pages/FAQ.jsx"));
+const Contact = lazy(() => import("../pages/Contact.jsx"));
+const NotFound = lazy(() => import("../pages/NotFound.jsx"));
+
+function lazyPage(element) {
+  return <Suspense fallback={<div className="route-loading" aria-live="polite" />}>{element}</Suspense>;
+}
 
 export default function AppRoutes() {
   return (
     <Routes>
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/layanan" element={<Services />} />
-        <Route path="/catalog" element={<Catalog />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/portfolio/:slug" element={<PortfolioDetail />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/faq" element={<FAQ />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/layanan" element={lazyPage(<Services />)} />
+        <Route path="/catalog" element={lazyPage(<Catalog />)} />
+        <Route path="/portfolio" element={lazyPage(<Portfolio />)} />
+        <Route path="/portfolio/:slug" element={lazyPage(<PortfolioDetail />)} />
+        <Route path="/about" element={lazyPage(<About />)} />
+        <Route path="/faq" element={lazyPage(<FAQ />)} />
+        <Route path="/contact" element={lazyPage(<Contact />)} />
+        <Route path="*" element={lazyPage(<NotFound />)} />
       </Route>
     </Routes>
   );

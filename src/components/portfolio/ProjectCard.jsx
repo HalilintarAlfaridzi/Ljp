@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -8,18 +7,17 @@ export default function ProjectCard({ project, featured = false }) {
   const description = project.shortDescription || project.description;
 
   return (
-    <motion.article
+    <article
       className={`project-card ${featured ? "project-card-featured" : ""}`}
-      initial={{ opacity: 0, y: 22 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.25 }}
-      transition={{ duration: 0.45 }}
     >
       <Link className="project-card-link" to={detailPath} aria-label={`Lihat detail project ${project.title}`}>
         <div className="card-image">
           <img
             decoding="async"
             loading={featured ? "eager" : "lazy"}
+            fetchPriority={featured ? "high" : "auto"}
+            width="1312"
+            height="816"
             src={image}
             alt={`${project.title} oleh LJP Custom Furniture`}
           />
@@ -49,6 +47,6 @@ export default function ProjectCard({ project, featured = false }) {
           </span>
         </div>
       </Link>
-    </motion.article>
+    </article>
   );
 }

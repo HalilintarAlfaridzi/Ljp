@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { navigationItems } from "../constants/navigation";
@@ -12,6 +12,8 @@ import FloatingWhatsapp from "../components/common/FloatingWhatsapp";
 export default function MainLayout() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const isScrolledRef = useRef(false);
+  const scrollFrameRef = useRef(0);
   const location = useLocation();
 
   useEffect(() => {
@@ -19,10 +21,32 @@ export default function MainLayout() {
   }, [location.pathname]);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 24);
+    const updateScrolledState = () => {
+      scrollFrameRef.current = 0;
+      const nextIsScrolled = window.scrollY > 24;
+
+      if (isScrolledRef.current !== nextIsScrolled) {
+        isScrolledRef.current = nextIsScrolled;
+        setIsScrolled(nextIsScrolled);
+      }
+    };
+
+    const handleScroll = () => {
+      if (scrollFrameRef.current === 0) {
+        scrollFrameRef.current = window.requestAnimationFrame(updateScrolledState);
+      }
+    };
+
     handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      if (scrollFrameRef.current) {
+        window.cancelAnimationFrame(scrollFrameRef.current);
+      }
+
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
@@ -97,7 +121,15 @@ function BrandLink({ className = "" }) {
 
   return (
     <Link className={brandClassName} to="/" aria-label="LJP Custom Furniture home">
-      <img className="brand-logo" src={publicImages.logo} alt="" aria-hidden="true" />
+      <img
+        className="brand-logo"
+        src={publicImages.logo}
+        alt=""
+        aria-hidden="true"
+        width="52"
+        height="52"
+        decoding="async"
+      />
       <strong>
         <span>LJP</span>
         <span>Custom Furniture</span>

@@ -61,7 +61,15 @@ export default function About() {
       />
       <section className="section">
         <div className="container split-grid">
-          <img className="feature-image" src={images.about} alt="Detail furniture custom LJP" loading="lazy" />
+          <img
+            className="feature-image"
+            src={images.about}
+            alt="Detail furniture custom LJP"
+            loading="lazy"
+            decoding="async"
+            width="1100"
+            height="825"
+          />
           <div>
             <SectionHeader
               eyebrow="Profil Singkat"

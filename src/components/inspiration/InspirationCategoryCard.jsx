@@ -1,15 +1,10 @@
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function InspirationCategoryCard({ category, featured = false }) {
   return (
-    <motion.article
+    <article
       className={`inspiration-category-card ${featured ? "inspiration-category-card-featured" : ""}`}
-      initial={{ opacity: 0, y: 22 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.22 }}
-      transition={{ duration: 0.42 }}
     >
       <Link
         className="inspiration-category-link"
@@ -17,7 +12,14 @@ export default function InspirationCategoryCard({ category, featured = false }) 
         aria-label={`Lihat catalog ${category.title}`}
       >
         <div className="inspiration-category-image">
-          <img src={category.coverImage} alt={`Inspirasi ${category.title} LJP Custom Furniture`} loading="lazy" />
+          <img
+            src={category.coverImage}
+            alt={`Catalog ${category.title} LJP Custom Furniture`}
+            loading="lazy"
+            decoding="async"
+            width="736"
+            height="920"
+          />
           <span>{category.count} Desain</span>
         </div>
         <div className="inspiration-category-body">
@@ -29,6 +31,6 @@ export default function InspirationCategoryCard({ category, featured = false }) 
           </span>
         </div>
       </Link>
-    </motion.article>
+    </article>
   );
 }
